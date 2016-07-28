@@ -1,0 +1,179 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/**** 1. VARIABLES ****/
+
+$main-colour: #E21F1D;
+$secondary-colour: #2C3463;
+$spacing: 57px;
+
+/**** 2. HEADER ****/
+
+body {
+	div.top-bar {
+		background: #000;
+
+		ul {
+			background: #000;
+		}
+
+		ul.menu {
+			img.logo {
+				max-width: 115px;
+			}
+		}
+
+		div.top-bar-right {
+			padding-right: 10px;
+		}
+	}
+}
+
+/**** 3. BODY ****/
+
+.spacing {
+	padding-top: $spacing;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+div#show-data {
+	ul {
+		list-style: none;
+		margin: 0px;
+
+		li {
+			div {
+    			border-bottom: 1px solid #999;
+    			margin-bottom: 10px;
+    			width: 100%;
+    			padding-bottom: 10px;
+    			word-wrap: break-word;
+			}
+
+			b {
+				color: $main-colour;
+			}
+		} 
+	}
+}
+
+div#show-issueData {
+	ul {
+		list-style: none;
+		margin: 0px;
+
+		li {
+			b {
+				color: #000;
+			}
+		} 
+	}
+	ul.pricing-table {
+    	border: 1px solid #dddddd;
+    	float: left;
+    	margin: 0 10px 10px 0;
+    	width: 200px;
+
+    	li {
+    		display: list-item;
+    	}
+
+    	li.title {
+    		background-color: #333333;
+    		color: #eeeeee;
+    		font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif !important;
+    		font-size: 0.88889rem;
+    		font-weight: normal;
+    		padding: 0.83333rem 1.11111rem;
+    		text-align: center;
+		}
+
+		li.price {
+    		background-color: #f6f6f6;
+    		color: #333333;
+    		font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif !important;
+    		font-size: 1.77778rem;
+    		font-weight: normal;
+    		padding: 0.83333rem 1.11111rem;
+    		text-align: center;
+		}
+
+		li.bullet-item {
+    		background-color: #ffffff;
+    		border-bottom: 1px dotted #dddddd;
+    		color: #333333;
+    		font-size: 0.77778rem;
+    		font-weight: normal;
+    		padding: 0.83333rem;
+    		text-align: center;
+		}
+
+		li.cta-button {
+    		background-color: #ffffff;
+    		padding: 1.11111rem 1.11111rem 0;
+    		text-align: center;
+		}
+	}
+}
+
+div#show-totalsData {
+	ul {
+		list-style: none;
+		margin: 0px;
+	}
+}

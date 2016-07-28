@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <!-- menu bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text"><img class="logo" src="images/WA-transparent.png"></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <h3>Dashboard</h3>
+      </div>
+    </div>
+
+    <!-- body -->
+    <!-- cost graphs -->
+    <div class="row spacing">
+      <div class="callout">
+        <h3>Issues Cost</h3>
+        <div class="large-6 medium-6 columns">
+          <div id="chartContainer">FusionCharts XT will load here!</div>
+        </div>     
+        <div class="large-6 medium-6 columns">
+          <div id="chartContainer2">FusionCharts XT will load here!</div>
+        </div>
+        <br class="clear" />
+      </div>
+    </div>
+
+    <!-- weekly issues data dump -->    
+    <div class="row spacing">
+      <div class="large-12 columns callout">
+        <div>
+          <h3>Weekly Issues Data</h3>
+          <div class="large-12 columns no-padding">
+            <div id="show-data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Issue data rectangles -->
+    <div class="row spacing">
+      <div class="large-12 medium-12 columns callout">
+        <h3>Issue Data Details</h3>
+        <div id="show-issueData"></div>
+      </div>
+    </div>
+
+    <!-- Totals -->
+    <div class="row spacing">
+      <div class="large-12 medium-12 columns callout">
+        <h3>Totals</h3>
+        <div id="show-totalsData"></div>
+      </div>
+    </div>    
+    <!-- Body End -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/fusioncharts.js"></script>
+    <script src="js/themes/fusioncharts.theme.fint.js"></script>
+    <script type="text/javascript">
+        FusionCharts.ready(function(){
+          var CurrentCostChart = new FusionCharts({
+              "type": "column2d",
+              "renderAt": "chartContainer",
+              "width": "100%",
+              "height": "350",
+              "dataFormat": "json",
+              "dataSource":  {
+                "chart": {
+                  "caption": "Current Period Issue Cost",
+                  "subCaption": "",
+                  "xAxisName": "Issue",
+                  "yAxisName": "Cost",
+                  "theme": "fint"
+               },
+               "data": [
+                  {
+                     "label": "Fuel Injection",
+                     "value": "16880000"
+                  },
+                  {
+                     "label": "Brake loose",
+                     "value": "3110000"
+                  },
+                  {
+                      "label": "Loss of control",
+                      "value": "2220000"
+                  },
+                  {
+                     "label": "Clutch burnt",
+                     "value": "2130000"
+                  },
+                  {
+                     "label": "Fuel pipe leak",
+                     "value": "1230000"
+                  },
+                  {
+                     "label": "Rear Tail Light",
+                     "value": "1030000"
+                  },
+                  {
+                     "label": "Window hiss",
+                     "value": "6700000"
+                  }
+                ]
+            }
+
+          });
+        CurrentCostChart.render();
+        })
+    </script>
+    <script type="text/javascript">
+        FusionCharts.ready(function(){
+          var CurrentCostChart = new FusionCharts({
+              "type": "column2d",
+              "renderAt": "chartContainer2",
+              "width": "100%",
+              "height": "350",
+              "dataFormat": "json",
+              "dataSource":  {
+                "chart": {
+                  "caption": "Total Issue Cost",
+                  "subCaption": "",
+                  "xAxisName": "Issue",
+                  "yAxisName": "Cost",
+                  "theme": "fint"
+               },
+               "data": [
+                  {
+                     "label": "Fuel Injection",
+                     "value": "16880000"
+                  },
+                  {
+                     "label": "Brake loose",
+                     "value": "19990000"
+                  },
+                  {
+                    "label": "Loss of control",
+                    "value": "22210000"
+                  },
+                  {
+                     "label": "Clutch burnt",
+                     "value": "24340000"
+                  },
+                  {
+                     "label": "Fuel pipe leak",
+                     "value": "25570000"
+                  },
+                  {
+                     "label": "Rear Tail Light",
+                     "value": "26600000"
+                  },
+                  {
+                     "label": "Window hiss",
+                     "value": "27270000"
+                  }
+                ]
+            }
+
+          });
+        CurrentCostChart.render();
+        })
+    </script>
+  </body>
+</html>
